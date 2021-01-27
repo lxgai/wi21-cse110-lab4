@@ -34,9 +34,33 @@
 
 13-E. student.courseLoad[0]
 
-14. 
+14-A.  **'32'** -> We get this answer because '3' is a string, so the binary + will convert the 2 into a string and concatenate them. 
 
-15.
+14-B. **1** -> We get 1 because numeric conversions happen in mathematical expressions automatically, so the '3' is converted to a number.
+
+14-C. **3** - >We get 3 because numeric conversions happen in mathematical expressions automatically, and, numeric conversion rules state that null becomes 0. So 3+null becomes 3+0. 
+
+14-D. **'3null'** -> We get this answer because '3' is a string, so the binary + will convert the null into a string 'null' and concatenate them. 
+
+14-E. **4** -> We get 4 because numeric conversions happen in mathematical expressions automatically, and, numeric conversion rules state that true becomes 1. So true+3 becomes 1+3. 
+
+14-F. **0** -> We get 0 because numeric conversions happen in mathematical expressions automatically, and, numeric conversion rules state that null and false both become 0. So false+null becomes 0+0.
+
+14-G. **'3undefined'** -> We get this answer because '3' is a string, so the binary + will convert the undefined into a string 'undefined' and concatenate them. 
+
+14-H. **NaN** -> We get this answer because numeric conversions happen in mathematical expressions automatically. However, by numeric conversion rules, undefined turns into NaN, meaning there is no valid numerical answer.
+
+15-A. **true** -> We get true because when comparing values of different types, JS converts the values to numbers. '2' turns into number 2. 
+
+15-B. **false** -> We get false because '2' and '12' are strings and JS compares strings in lexicographical order. In this order, '2' is greater than '1'. 
+
+15-C. **true** -> We get true because when comparing values of different types, JS converts the values to numbers. '2' turns into number 2.
+
+15-D. **false** -> We get false because the strict equality operator === checks the equality without type conversion. Since 2 and '2' are different types, the statement is automatically false.
+
+15-E. **false** -> We get false because when comparing values of different types, JS converts the values to numbers. By the rules, true turns into number 1. 
+
+15-F. **true** -> We get true because Boolean(2) returns true and the strict equality operator sees that true===true is true. They are the same type of the same value.
 
 16. == is a regular equality check that cannot differentiate **0** and the empty string from **false**. === is a strict equality check that checks for equality without type conversation, so it will differentiate **0** from **false**, as well as the empty string from **false**. 
 
