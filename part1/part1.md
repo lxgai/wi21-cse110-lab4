@@ -12,3 +12,9 @@
 10. At line 12, we will get an error that *discountedPrice* is not defined. Becase we declared *discountedPrice* with *const*, similar to *let*, the variable is only visible within the for-loop, thus we get an error for trying to access it outside the for-loop.
 11. At line 13, we will print the final price of the last element in the *prices* array. (This is assuming we have no errors in previous lines, which we would, because *finalPrice* can't be updated if declared with *const*). Declared with *const* at the beginning of the function, before any code blocks, *finalPrice* is visible to the entire function and thus can be printed. If our code is functional and we call **discountPrices([100, 200, 300], .5)**, we print **150**.
 12. If we ignore the function's errors, the function returns *discounted*: [50, 100, 150]. Because *discounted* was declared with *const* at the beginning of the function (outside any code blocks/loops), similar to *let*, it is visible to the entire function. We never attempt to reassign the const *discounted* to something else.
+13-A. student.name
+13-B. student['Grad Year']
+13-C. student.greeting()
+13-D. student['Favorite Teacher'].name
+13-E. student.courseLoad[0]
+
