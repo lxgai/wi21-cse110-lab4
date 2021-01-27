@@ -1,20 +1,42 @@
 # Part 1
 
 1. At line 11, the value of *prices.length* will be printed, because *i* was declared with *var i*, so *i* is a global variable with no block scope. So *i* exists outside the for-loop. When *i* = *prices.length*, we exit the for-loop and this value of *i* gets printed. If we call **discountPrices([100, 200, 300], .5)**, we print **3**. 
+
 2. At line 12, we print the *discountedPrice* of the last element in the *prices* array. This is because *discountedPrice* was declared with *var*, so it is a global variable with no block scope. Also, *var* tolerates redeclarations, so it's okay that it happens at line 6. The variable exists outside the for-loop and is last updated with the discounted price of the last price in the *prices* array. So that is the value it holds when it gets printed outside the for-loop. If we call **discountPrices([100, 200, 300], .5)**, we print **150**.
+
 3. At line 13, we print the *finalPrice* of the last element in the *prices* array. *finalPrice* was declared with *var*, so it's a global variable with no block scope.  *finalPrice* is last updated when we are at the last element in the *prices* array. After that we exit the for-loop. So *finalPrice* holds the final price of the last element. If we call **discountPrices([100, 200, 300], .5)**, we print **150**.
+
 4. The function returns *discounted*: [50, 100, 150]. The *discounted* array is empty at first. Then we go through the for-loop, and for each price in *prices* array, we apply the discount and add the discounted price to the *discounted* array. A 50% discount on 100, 200, and 300 is 50, 100, and 150 respectively. **This works** because all the variables (*discounted*, in particular), declared with *var*, have their visibility scoped to the entire current function (no block scope). 
+
 5. At line 11, you will get an error that *i* is not defined. Because we declared *i* with *let*, *i* is only visible inside the for-loop, and thus we get an error for trying to access it outside the for-loop.
+
 6. At line 12, we will get an error that *discountedPrice* is not defined. Becase we declared *discountedPrice* with *let*, the variable is only visible within the for-loop, thus we get an error for trying to access it outside the for-loop.
+
 7. At line 13, we will print the final price of the last element in the *prices* array. This is because *finalPrice* was declared with *let* outside of any code blocks/loops, but still within the function. That makes it visible throughout the whole function. So, we can print the value it contains, which is the value it receives in the last iteration of the for-loop (the final price of the last element in *prices*). If we call **discountPrices([100, 200, 300], .5)**, we print **150**.
+
 8. If we ignore the function's undefined variable errors, the function returns *discounted*: [50, 100, 150]. The for-loop puts the discounted price of each element in *prices* into *discounted*. We are able to access *discounted* in the last line of the function because we declared *let discounted* at the beginning of the function, outside any code/loop blocks. So *discounted* is visible throughout the entire function.
+
 9. At line 11, you will get an error that *i* is not defined. Because we declared *i* with *let*, *i* is only visible inside the for-loop, and thus we get an error for trying to access it outside the for-loop.
+
 10. At line 12, we will get an error that *discountedPrice* is not defined. Becase we declared *discountedPrice* with *const*, similar to *let*, the variable is only visible within the for-loop, thus we get an error for trying to access it outside the for-loop.
+
 11. At line 13, we will print the final price of the last element in the *prices* array. (This is assuming we have no errors in previous lines, which we would, because *finalPrice* can't be updated if declared with *const*). Declared with *const* at the beginning of the function, before any code blocks, *finalPrice* is visible to the entire function and thus can be printed. If our code is functional and we call **discountPrices([100, 200, 300], .5)**, we print **150**.
+
 12. If we ignore the function's errors, the function returns *discounted*: [50, 100, 150]. Because *discounted* was declared with *const* at the beginning of the function (outside any code blocks/loops), similar to *let*, it is visible to the entire function. We never attempt to reassign the const *discounted* to something else.
+
 13-A. student.name
+
 13-B. student['Grad Year']
+
 13-C. student.greeting()
+
 13-D. student['Favorite Teacher'].name
+
 13-E. student.courseLoad[0]
+
+14. 
+
+15.
+
+16. == is a regular equality check that cannot differentiate **0** and the empty string from **false**. === is a strict equality check that checks for equality without type conversation, so it will differentiate **0** from **false**, as well as the empty string from **false**. 
 
