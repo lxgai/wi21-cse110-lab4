@@ -64,3 +64,22 @@
 
 16. == is a regular equality check that cannot differentiate **0** and the empty string from **false**. === is a strict equality check that checks for equality without type conversation, so it will differentiate **0** from **false**, as well as the empty string from **false**. 
 
+17. **How are you?** gets printed.  When comparing values of different types, JS converts the values to numbers. By the rules, true turns into number 1 and that does not equal the number 2, so the boolean value that this statement gets converted to is *false*. So we fail the first if statement and move onto the else-if statement. Here we have just a 2, and by JS' boolean conversion rules, 2 is not intuitively "empty" so it gets converted to true. Therefore, we enter this code block and print **How are you?**. 
+
+18. part1-question18.js
+
+19. **[6, 8, 10]** -> We get this result because in the first iteration of the for loop, we go to our callback function, *doSomething*, with the arguments *1*, *function(x)* (the first element in *array* is 1 and function(x) is given). When we go into *doSomething*, that calls its callback function, *function(x)*, with the argument *num + 2*, where *num* is the 1. So basically we call *function(3)*, which returns *3 * 2 = 6*. So 6 gets pushed into *newArr*. In the 2nd iteration of the for loop, we go to our callback function, *doSomething*, with the arguments *2*, *function(x)* (the second element in *array* is 2 and function(x) is given). When we go into *doSomething*, that calls its callback function, *function(x)*, with the argument *num + 2*, where *num* is the 2. So basically we call *function(4)*, which returns *4 * 2 = 8*. So 8 gets pushed into *newArr*. In the 3nd iteration of the for loop, we go to our callback function, *doSomething*, with the arguments *3*, *function(x)* (the third element in *array* is 3 and function(x) is given). When we go into *doSomething*, that calls its callback function, *function(x)*, with the argument *num + 2*, where *num* is the 3. So basically we call *function(5)*, which returns *5 * 2 = 10*. So 10 gets pushed into *newArr*. Then we finish the loop and return *newArr*, which holds [6,8,10].
+
+20. part1-question20.js
+
+21. The output of the code is:
+
+     **1**
+     
+     **4**
+     
+     **3**
+     
+     **2**
+     
+
